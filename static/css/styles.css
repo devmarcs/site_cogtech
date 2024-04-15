@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
   --cogverde: #003838;
   --cogazul: #1134d5;
@@ -53,6 +54,7 @@
   --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-cogfont: "Red Hat Display";
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -89,7 +91,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: var(--bs-cogfont);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -98,6 +100,53 @@ body {
   background-color: var(--cogcinza);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+/* INÍCIO CARROSSEL*/
+main {
+height: 100vh;
+width: 100%;
+max-width: 1000px;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+justify-content: center;
+}
+
+span {
+  font-size: x-large;
+}
+
+.imgcarro {
+  box-shadow: 0 1px 2px #0003;
+  width: 100%;
+}
+
+.swiper{
+  height: 500px;
+}
+
+.swiper-slider {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 450px) {
+  .swiper {
+    height: 270px;
+  }
+}
+
+/*FIM CARROSEL*/ 
+
+
+#img {
+  object-fit: cover;
+  height: 500px;
+  width: 500px;
 }
 
 .logocog {
@@ -124,7 +173,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Red Hat Display";
   font-weight: 700;
   line-height: 1.2;
 }
@@ -660,7 +709,7 @@ background-color: var(--cogverde);
   margin-right: auto;
   margin-left: auto;
 }
-
+/*redhat display*/
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
