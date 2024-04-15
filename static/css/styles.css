@@ -150,8 +150,12 @@ span {
 }
 
 .logocog {
-  width: 6em;
-  ;
+  width: 1rem;
+  
+}
+
+.link__nome {
+  padding-leftr: 2rem;
 }
 
 .logoflor {
@@ -709,6 +713,7 @@ background-color: var(--cogverde);
   margin-right: auto;
   margin-left: auto;
 }
+
 /*redhat display*/
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -11041,7 +11046,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
-  background-color: var(--cogverde);
+  
 }
 .masthead .masthead-heading {
   font-size: 1rem;
