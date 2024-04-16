@@ -153,6 +153,15 @@ span {
   width: 1px;
 }
 
+.banner-img {
+  width: 70%;
+  max-width: 600px; /* Ajuste de acordo com o tamanho desejado */
+}
+
+.container__banner {
+  align-items: center;
+}
+
 .link__nome {
   padding-left: 2rem;
 }
@@ -164,6 +173,16 @@ span {
 .logoflorpt {
   width: 15rem;
 }
+
+.swiper-slider img {
+  width: 100%;
+}
+
+
+
+
+
+
 
 hr {
   margin: 1rem 0;
