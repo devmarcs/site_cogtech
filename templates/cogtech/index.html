@@ -1,139 +1,227 @@
-{% extends 'cogtech/base.html' %}
-{% load static %}
-{% block content %}
-    <body id="page-top">
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CogTech</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        {% load static %}
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand text-uppercase " href="#page-top"><img class="logocog" src="{% static 'img/logocog.png' %}" alt="" ></a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="containner__pai">
+                    <a class="navbar-brand" href="#page-top">
+                        <img class="logosup text-uppercase"
+                         src="{% static 'img/logocog.png' %}" alt="">
+                    </a>
+                        <span class="nomelogo">cogtech</span></div>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-dark text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Sobre a Empresa</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Nossos Clientes</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Entre em contato</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#page-top">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#produtos">Produtos</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Clientes</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contato">contato</a></li>
+                        
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead text-white text-center">
+        <header id="page-top" class="masthead text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                
-                <div class="container__banner"><img class="banner-img" src="{% static 'img/COGTECHLONAS.png' %}" alt="Seu banner" />
-                </div>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading text-uppercase font-weight-light mb-0">Atuação em escolas públicas e privadas na educação básica</p>
+               <img class="logo__principal" 
+               src="{% static 'img/COGTECHLONAS.png' %}" alt="">
             </div>
         </header>
-
-        <!-- About Section-->
-        <section class="page-section text-white mb-0" id="about">
+       
+        <!-- Produtos Section-->
+        <section class="page-section  text-white mb-0" id="produtos">
             <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Sobre a COGTECH</h2>
+                <!-- Produtos Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-dark">Produtos</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                   
-                </div>
+               
                 <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">A Cogtech é a plataforma tecnológica ideal
-                        para digitalizar os processos pedagógicos da
-                        sua secretaria de educação. Com ela, há um
-                        aproveitamento potencializado na dinâmica do
-                        preenchimento do diário de classe do
-                        professor, na gestão dos conteúdos lecionados
-                        em sala de aula, nos resultados apresentados
-                        pelos alunos com objetivo de gerenciar o
-                        aproveitamento nas avaliações externas assim
-                        como atuar previamente na melhoria da
-                        qualidade e dos resultados futuros desses
-                        alunos.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">É possível descentralizar a gestão
-                        permitindo que cada profissional atue de forma
-                        efetiva dentro do seu espectro de atuação na
-                        secretaria de educação proporcionando assim
-                        muito mais eficiência e qualidade nas tarefas
-                        internas do dia a dia, além de contar com
-                        módulos específicos para a atuação da
-                        educação pública e com forte atuação na
-                        secretaria com toda a documentação
-                        digitalizada e organizada. Nós sabemos que um futuro
-                        brilhante é consequência do
-                        compromisso com o presente e
-                        estamos prontos para ajudar a
-                        promover o protagonismo da
-                        educação significativa. Para isso,
-                        nós contamos com você: é só
-                        conectar.</p></div>
+                <div class=" containner__produto__pai1">
+                    <div class="containner__titulo__filho1">
+                        <h2 class="titulo__filho1 text-uppercase">SUPORTE
+                            PEDAGÓGICO</h2>
+                    </div>
+
+                    <div class="containner__texto__filho1">
+                        <p class="paragrafo__filho1 text-uppercase">Para além de uma plataforma
+                            tecnológica, nosso serviço inclui
+                            acompanhamento pedagógico, com
+                            formações e encontros periódicos para
+                            avaliação dos resultados da equipe,
+                            melhorias continuas e principalmente
+                            para que o cliente alcance os resultados
+                            efetivos necessários com as informações
+                            obtidas através da plataforma tudo isso
+                            incluso na aquisição da solução!</p>
+                    </div>
                 </div>
+
+                <div class="containner__produto__pai2">
+                    <div class="containner__texto__filho2">
+                        <p class="paragrafo__filho2 text-uppercase">A educação especial tem módulo próprio,
+                            onde é possível realizar a anamnese
+                            completa do aluno, acompanhar os
+                            resultados de maneira muito específica e
+                            gerenciar o trabalho para que os
+                            resultados sejam monitorados de maneira
+                            efetiva garantido assim um trabalho
+                            muito mais eficiente.</p>
+                    </div>
+                
+                    <div class="containner__titulo__filho2">
+                        <h2 class="titulo__filho2 text-uppercase">EDUCAÇÃO
+                            ESPECIAL</h2>
+                    </div>
+                </div>
+
+                <div class="containner__produto__pai3">
+                    <div class="containner__titulo__filho3">
+                        <h2 class="titulo__filho3 text-uppercase">TURMAS
+                            MULTIDISCIPLINARES</h2>
+                    </div>
+
+                    <div class="containner__texto__filho3">
+                        <p class="paragrafo__filho3 text-uppercase">As turmas multisseriadas também
+                            possuem um módulo específico para
+                            atender as necessidades dos professores
+                            que atuam com essas turmas, evitando
+                            assim o retrabalho desse profissional e
+                            deixando sua atuação muito mais prática
+                            e produtiva. É possível também gerenciar
+                            essas turmas de maneira específica e
+                            avaliar seus resultados para atuação
+                            imediata afim de entregar uma educação
+                            com muito mais qualidade.</p>
+                    </div>
+                </div>
+                
+                <!-- About Section Button-->
+                
             </div>
         </section>
         <!-- Contact Section-->
-        <!--Carrossel Início-->
-        <h2 class="page-section-heading text-center text-uppercase mb-0">Alguns dos Nossos Clientes</h2>
-        <section class="page-section portfolio" id="portfolio">
-                    <!-- Slider main container -->
-            <div class="swiper">
+
+        <section class="page-section  section-carrossel" id="contact">
+            <h2 class="page-section-heading text-center text-uppercase text-dark">Clientes</h2>
+            <!-- Slider main container -->
+            
+            <!-- Slider main container -->
+            <div class="swiper-container carrossel__containner__pai">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide"><img src="{% static 'img/logopalmeirina.jpeg' %}" alt=""></div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-            
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </section>
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="{% static 'img/logocaetesredi.jpeg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logocalcadoredi.png' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logocapelanovaredi.jpeg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logolajedoredi.png' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logoctcredi.jpeg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logopalmeirinaredi.jpeg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logoparanatamaredi.png' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logopedraredi.jpg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logosaloaredi.jpg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logosantaredi.jpg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logosaobrasredi.jpeg' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logosouzaleaoredi.png' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logotoodlingredi.png' %}" alt=""></div>
+                    <div class="swiper-slide"><img src="{% static 'img/logoventurosaredi.jpg' %}" alt=""></div>
+                </div> 
+            </{% setup '  </section>
         
-       
-        <!-- Footer-->
-        <footer class="footer text-center">
+        <section class="page-section mb-0 section__containner__pai" id="contato">
+            <h2 class="page-section-heading text-center text-uppercase text-dark">Contato</h2>
             <div class="container">
                 <div class="row">
                     <!-- Footer Location-->
-                    <div class="col-lg-6 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Endereço</h4>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Localização</h4>
                         <p class="lead mb-0">
-                            Av. Gonçalves Maia n°144
+                            Rua Gonçalves Maia n°141
                             <br />
-                            Heliópolis, Gus PE 2°Andar Sala 05
+                            Heliópolis, Garanhuns-PE 
+                        </p>
+                    </div>
+
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Entre em Contato</h4>
+                        <p class="lead mb-0">
+                            <span class="titulo">Suporte Técnico</span>
+                            faleconosco@cogtechoficial.com.br
+                            <br />
+                            <span class="titulo">Négócios</span> <br>
+                            Julie <br>
+                            <span class="titulo">Administrativo</span> <br>
+                            Sarah 
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
-                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-lg-4 mb-4 mb-lg-1">
                         <h4 class="text-uppercase mb-4">Nossas Redes</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                        <p class="lead mb-0">
+                        <h4 class="text-uppercase mb-4"></h4>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
                     </div>
-                    <!-- Footer About Text-->
-                    
                 </div>
             </div>
-        </footer>
+        </section>
+
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright &copy; Cogtech</small></div>
         </div>
         
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
         
-{% endblock %}
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            var swiper = new Swiper('.carrossel__containner__pai', {
+        // Defina as opções do Swiper aqui
+        loop: true, // Loop infinito
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000, // Tempo de intervalo entre os slides (em milissegundos)
+            disableOnInteraction: false, // Não interromper a reprodução automática quando o usuário interagir
+        },
+        pagination: {
+            el: '.swiper-pagination', // Elemento onde a paginação será exibida
+        },
+        navigation: {
+            nextEl: '.swiper-button-next', // Elemento do botão "Próximo slide"
+            prevEl: '.swiper-button-prev', // Elemento do botão "Slide anterior"
+        },
+    });
+    
+        </script>
+    </body>
+</html>
