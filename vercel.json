@@ -1,0 +1,14 @@
+{
+    "builds":[
+        {
+            "src":"cogtech/wsgi.py",
+            "use":"@vercel/python"
+        }
+    ],
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"cogtech/wsgi.py"
+        }
+    ]
+}
