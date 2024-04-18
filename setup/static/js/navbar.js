@@ -6,14 +6,18 @@ window.addEventListener('DOMContentLoaded', event => {
         if (!navbarCollapsible) {
             return;
         }
+    
+        // Remover a classe "active" de todos os links do navbar
+        navbarCollapsible.querySelectorAll('a').forEach(function(link) {
+            link.classList.remove('active');
+        });
+    
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
         }
-
     };
-
     // Shrink the navbar 
     navbarShrink();
 
